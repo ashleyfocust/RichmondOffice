@@ -1,0 +1,109 @@
+
+<div class = 'pagebanner'>
+</div>
+
+<div id='cssvmenu'>
+	
+<script>
+	function PollAcceptRequests(){
+//		console.log('Hello'+$.now())
+			$.get("popacceptancealerts.php", function(data) {
+//		console.log('>'+data+'<');
+//			console.log(data.indexOf('0'));
+		
+		if(data.substr(2,1) !='0'){
+			$("#bookings").html(data+' Bookings to review');
+			$("#bookings").css('display','block');
+		} else {
+			$("#bookings").css('display','none');
+		}
+		;
+		
+	});
+	
+	
+	} 
+	setInterval( PollAcceptRequests, 3000 );
+
+</script>	
+Menu	
+	<ul>
+		<li class='last'>
+			<a href='index1.php'><span>Home</span></a>
+		</li>
+	</ul>
+	Hospitals
+	<ul>
+
+		<li>
+			<a href='browseshiftrequests.php'><span>List Shifts</span></a>
+		</li>
+		<li>
+			<a href='shiftrequest_new.php'><span>Create Shifts</span></a>
+		</li>	
+	
+		<li>
+			<a href='Hospitals.php'><span>List Hospitals</span></a>
+		</li>	
+
+	</ul>	
+
+
+	Nurses
+
+	<ul>
+		<li>
+			<a href='nursedetails.php'><span>Nurse Details</span></a>
+		</li>
+		<li>
+			<a href='RecordAvailability.php'><span>Nurse Availability</span></a>
+		</li>
+		<li>
+			<a href='placements.php'><span>View all Jobs</span></a>
+		</li>
+		<li>
+			<a href='browsenurses.php'><span>List Nurses</span></a>
+		</li>
+	
+		<li>
+			<a href='bulksms.php'><span>Bulk Text</span></a>
+		</li>		
+	</ul>
+	
+
+	<ul>
+
+	
+		<li>
+			<a href='registrations.php'><span>Registrations</span></a>
+		</li>
+
+	</ul>
+	
+	
+		<ul>
+
+	
+		<li>
+			<a href='external_registrations.php'><span>Web Applicants</span></a>
+		</li>
+
+	</ul>
+	
+
+	<ul>
+			<li>
+			<a   href='report_selector.php'><span>Reports</span></a>
+		</li>
+		
+
+
+	</ul>
+
+<a href = "index1.php#onlinebookings">
+<div id= "bookings" style = 'padding:3px; border-radius:8px; width:9.5em;background-color:red;color:white; display:none'>&nbsp;</div>	
+</a>
+<BR>	
+</div>
+
+
