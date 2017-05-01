@@ -1,1 +1,1 @@
-<?phpdate_default_timezone_set('Europe/London');include("../../rich_conf/config.php");?>
+<?phpdate_default_timezone_set('Europe/London');include("/var/www/rich_conf/config.php");?>
